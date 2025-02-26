@@ -1,0 +1,58 @@
+        body {
+            font-family: "Cedarville Cursive", serif;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            font-family: "Cedarville Cursive", serif;
+            background: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section {
+            font-family: "Cedarville Cursive", serif;
+            width: 30%;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, select, button {
+            font-family: "Cedarville Cursive", serif;
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            font-family: "Cedarville Cursive", serif;
+            background-color: #00bcd4;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .ticket {
+            font-family: "Cedarville Cursive", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .ticket img {
+            width: 150px;
+        }

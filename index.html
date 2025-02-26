@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Quiz 2</title>
+</head>
+<body>
+
+    <div class="container">
+      <h1>Ticketing Center</h1>
+        <details class="section">
+            <summary>Personal Information</summary>
+            <i>Fill out the form below</i>
+            <input type="text" id="name" placeholder="Complete Name">
+            <input type="email" id="email" placeholder="Email">
+            <button onclick="submitInfo()">SUBMIT INFO</button>
+        </details>
+        
+        <details class="section">
+            <summary>Ticket Price</summary>
+            <i>Check your ticket price</i>
+            <select id="seat">
+                <option value="Patron">Patron</option>
+                <option value="Balcony">Balcony</option>
+            </select>
+            <select id="option">
+                <option value="Regular">Regular</option>
+                <option value="VIP">VIP</option>
+            </select>
+            <button onclick="checkPrice()">TICKET PRICE</button>
+        </details>
+
+        <details class="section">
+            <summary>Print Ticket</summary>
+            <i>Select your ticket</i>
+            <div class="ticket">
+                <img src="https://clipart-library.com/images_k/movie-ticket-transparent/movie-ticket-transparent-19.png" alt="Cinema Ticket">
+                <button onclick="printTicket()">PRINT TICKET</button>
+                <button onclick="buyMoreTickets()">BUY MORE TICKETS</button>
+            </div>
+        </details>
+    </div>
+
+    <script>
+        function submitInfo() {
+            const name = document.getElementById("name").value;
+            alert("Thanks, " + name + "! Proceed to the next station.");
+        }
+
+        function checkPrice() {
+            const seat = document.getElementById("seat").value;
+            const option = document.getElementById("option").value;
+            let price = 0;
+
+            if (seat === "Patron") {
+                price = option === "VIP" ? 20 : 15;
+            } else if (seat === "Balcony") {
+                price = option === "VIP" ? 25 : 18;
+            }
+
+            alert("Your ticket price is $" + price + "! Proceed to the next station.");
+        }
+
+        function printTicket() {
+            alert("Check your email for your ticket. Thank you!");
+        }
+
+        function buyMoreTickets() {
+            location.reload();
+        }
+    </script>
+
+</body>
+</html>
